@@ -122,9 +122,9 @@ body {
 
 /* Toc Setting */
 :root {
-    --nav-width: 1380px;
+    --nav-width: 1440px;
     --article-width: 650px;
-    --toc-width: 300px;
+    --toc-width: 270px;
 }
 
 .toc {
@@ -133,6 +133,7 @@ body {
     background: var(--entry);
     border-radius: var(--radius);
     padding: 0.4em;
+    margin-bottom: 0rem;
 }
 
 .toc-container.wide {

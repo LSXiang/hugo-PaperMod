@@ -22,7 +22,7 @@
     {{- $count := .Count }}
     {{- with site.GetPage (printf "/%s/%s" $type $name) }}
     <li>
-        {{ $largestFontSize := 2.0 }}
+        {{ $largestFontSize := 1.5 }}
         {{ $smallestFontSize := 1.0 }}
         {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
         {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
