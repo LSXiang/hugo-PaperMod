@@ -43,6 +43,9 @@
       {{- end }}
     </ul>
     {{- end }}
+    <div class="post-tags">
+      {{- partial "license.html" . -}}
+    </div>
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
