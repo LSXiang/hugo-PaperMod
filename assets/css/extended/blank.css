@@ -17,8 +17,9 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 /* 链接样式 */
 .post-content a {
     color: #0969da;
-    box-shadow: none;
-    text-decoration: none;
+    /* box-shadow: none;
+    text-decoration: none; */
+    margin: 0.1rem;
 }
 .post-content a:hover {
     text-decoration: underline;
