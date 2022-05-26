@@ -32,7 +32,7 @@ pre, code {
 /* 行内代码 - 左右间距 */
 .post-content code {
     margin: unset;
-    font-size: 0.65em;
+    font-size: 0.68em;
 }
 /* 代码块 - 最大高度 */
 .post-content pre code {
