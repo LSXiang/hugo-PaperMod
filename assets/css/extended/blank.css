@@ -4,6 +4,11 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
 
+/* Hack 字体 */
+pre, code { 
+    font-family: Hack, monospace; 
+}
+
 /* # Markdown 风格 */
 /* 标题、正文、行内代码 - 颜色 */
 :root {
@@ -27,6 +32,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 /* 行内代码 - 左右间距 */
 .post-content code {
     margin: unset;
+    font-size: 0.65em;
 }
 /* 代码块 - 最大高度 */
 .post-content pre code {
