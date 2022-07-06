@@ -350,3 +350,72 @@ img:active {
     text-align: center;
 }
 
+/*代码里的滚动*/
+@media screen and (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 15px;
+        height: 13px;
+    }
+}
+
+/*页面顶部栏两边宽度*/
+.nav {
+    max-width: calc(var(--nav-width) + var(--gap) * 10);
+}
+
+.main {
+    max-width: calc(var(--main-width) + var(--gap) * 5);
+    /*max-width: calc(var(--main-width) + var(--gap) * 5);*/
+    /*margin: 0px 0px 0px 320px;*/
+    /*margin-left: 23%;*/
+    /*margin-right: 0px;*/
+}
+
+
+/*文章页*/
+.post-entry:hover {
+    transition: transform 0.5s;
+
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    /*transform: scale(1.03);*/
+    /*transform: scale(1.03) translateZ(0) translate3d(0, 0, 0) rotate(0.01deg);*/
+    transform: scale(1.03) translateZ(0) translate3d(0, 0, 0);
+}
+
+.post-entry {
+    /*-webkit-transition: all ease-out 0.2s;
+    -moz-transition: all ease-out 0.2s;
+    -o-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;*/
+    box-shadow: 1px 2px 2px 1px rgb(144 164 174 / 60%);
+}
+
+.dark .post-entry {
+    box-shadow: 1px 2px 2px 1px rgb(5 10 15 / 60%);
+}
+
+
+/*左上角名字*/
+.logo a {
+    /*-webkit-transition: all ease-out 0.2s;
+    -moz-transition: all ease-out 0.2s;
+    -o-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;*/
+}
+
+.logo a:hover {
+    transition: transform 0.5s;
+
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.08);
+}
+
+.logo a img {
+    border-radius: 25px;
+}
