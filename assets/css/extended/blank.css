@@ -12,9 +12,26 @@ pre, code {
 /* # Markdown 风格 */
 /* 标题、正文、行内代码 - 颜色 */
 :root {
-    --primary: #212121;  /* rgb(30, 30, 30); */
-    --content: #333333;  /* rgb(31, 31, 31); */
-    --code-bg: rgba(175, 184, 193, 0.2); /* rgb(245, 245, 245); */
+    /*--primary: #212121;  /* rgb(30, 30, 30); */
+    /*--content: #333333;  /* rgb(31, 31, 31); */
+    /*--code-bg: rgba(175, 184, 193, 0.2); /* rgb(245, 245, 245); */
+
+    --footer-height: 40px;
+    /*--content-gap: 20px;*/
+    /*--content: rgb(80, 80, 80);*/
+    /*--hljs-bg: rgb(35, 35, 35);*/
+    --hljs-bg: rgb(44, 44, 44);
+    /*--code-bg: rgb(235, 235, 235);*/
+    --code-bg: rgb(240, 240, 240);
+    --code-bg-border: rgb(200, 200, 200);
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --tag: rgb(235, 235, 235);
+
+    --nav-width: 1300px;
+    /*--nav-width: 1024px;*/
+    --article-width: 650px;
+    --toc-width: 300px;
 }
 .dark {
     --code-bg: rgba(175, 184, 193, 0.2); /* rgb(55, 56, 62); */
@@ -103,6 +120,8 @@ body {
     font-size: 1rem;
     margin-top: 1rem;
 }
+
+
 /* GitHub 样式的表格 */
 .post-content table tr {
     border: 1px solid #979da3 !important;
@@ -241,7 +260,10 @@ body {
 
 /* Image enlargement */
 img:active {
-    transform: scale(1.1, 1.1)
+    /*margin:50px;*/
+    border-radius: 10px;
+    transform: scale(1.1, 1.1);
+    opacity: 1;
 }
 
 
@@ -270,47 +292,6 @@ img:active {
 .button {
     transition: transform 0.5s;
 }
-
-
-/* 标签 */
-.terms-tags {
-    text-align: center;
-}
-
-.terms-tags a:hover {
-    background: none;
-
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
-
-.terms-tags a {
-    border-radius: 30px;
-    background: none;
-    transition: transform 0.5s;
-}
-
-.dark .terms-tags a {
-    background: none;
-}
-
-.dark .terms-tags a:hover {
-    background: none;
-
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
-
-.terms-tags li {
-    margin: 5px;
-}
-
 
 
 /* archives enlargement */
@@ -359,10 +340,11 @@ img:active {
     text-align: center;
 }
 
+
 /*代码里的滚动*/
 @media screen and (min-width: 768px) {
     ::-webkit-scrollbar {
-        width: 15px;
+        width: 13px;
         height: 13px;
     }
 }
@@ -427,4 +409,22 @@ img:active {
 
 .logo a img {
     border-radius: 25px;
+}
+
+
+/*---------------------------*/
+.topInner {
+    display: grid;
+    align-items: baseline;
+    justify-items: center;
+    margin: 7px;
+    font-weight: 900;
+}
+
+.topSvg {
+    width: 20px;
+}
+
+.top-link {
+    padding: unset;
 }
