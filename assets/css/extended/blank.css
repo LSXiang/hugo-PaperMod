@@ -129,7 +129,7 @@ body {
 
 /* Toc Setting */
 :root {
-    --nav-width: 1440px;
+    --nav-width: 1380px;
     --article-width: 650px;
     --toc-width: 270px;
 }
@@ -140,7 +140,6 @@ body {
     background: var(--entry);
     border-radius: var(--radius);
     padding: 0.4em;
-    margin-bottom: 0rem;
 }
 
 .toc-container.wide {
@@ -189,6 +188,16 @@ body {
     margin: 0 0 0 20px;
     padding: 0px 15px 15px 20px;
     font-size: 16px;
+
+    /*目录显示高度*/
+    max-height: 83vh;
+    overflow-y: auto;
+}
+
+.toc .inner::-webkit-scrollbar-thumb {  /*滚动条*/
+    background: var(--border);
+    border: 7px solid var(--theme);
+    border-radius: var(--radius);
 }
 
 .toc li ul {
