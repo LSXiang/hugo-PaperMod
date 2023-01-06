@@ -1,5 +1,23 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
+    <span id="runtime_span"></span> 
+    <script type="text/javascript">
+        function show_runtime() {
+            window.setTimeout("show_runtime()",1000);
+            X=new Date("10/20/2021 10:00:00");
+            Y=new Date();T=(Y.getTime()-X.getTime());
+            M=24*60*60*1000;
+            a=T/M;
+            A=Math.floor(a);
+            b=(a-A)*24;
+            B=Math.floor(b);
+            c=(b-B)*60;
+            C=Math.floor((b-B)*60);
+            D=Math.floor((c-C)*60);
+            runtime_span.innerHTML="The site has been up for " + A +" days " + B + " hours " + C + " minutes " + D + " seconds. <br>"
+        }
+        show_runtime();
+    </script>
     {{- if site.Copyright }}
     <span>{{ site.Copyright | markdownify }}</span>
     {{- else }}
@@ -10,9 +28,11 @@
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
     </span> -->
+    &nbsp;
     <span id="busuanzi_container_site_uv">
         <i class="fa-solid fa-user"></i><span id="busuanzi_value_site_uv"></span>
     </span>
+    &nbsp;
     <span id="busuanzi_container_site_pv">
         <i class="fa-solid fa-eye"></i><span id="busuanzi_value_site_pv"></span>
     </span>

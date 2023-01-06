@@ -16,7 +16,7 @@ pre, code {
     /*--content: #333333;  /* rgb(31, 31, 31); */
     /*--code-bg: rgba(175, 184, 193, 0.2); /* rgb(245, 245, 245); */
 
-    --footer-height: 40px;
+    --footer-height: 64px;
     /*--content-gap: 20px;*/
     /*--content: rgb(80, 80, 80);*/
     /*--hljs-bg: rgb(35, 35, 35);*/
@@ -427,4 +427,11 @@ img:active {
 
 .top-link {
     padding: unset;
+}
+
+/*footer*/
+.footer {
+    max-width: none;
+    padding: 10px 0 5px 0;
+    /*line-height: 50px;*/
 }
