@@ -3,11 +3,11 @@
     font-size: 0.8em;
     line-height: 1.4!important;
     font-family: monospace!important;
-    /*font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;*/
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 .post-content .highlight pre {
-    tab-size: 4 !important;
+    tab-size: 2 !important;
 }
 
 .post-content .highlight:not(table), .post-content pre {
@@ -21,7 +21,7 @@
 }
 
 .post-content :not(table) ::-webkit-scrollbar-thumb {
-    /*border: 2px solid rgb(55, 65, 75);*/
+    /* border: 2px solid rgb(55, 65, 75); */
 }
 
 .post-content pre code {
@@ -52,7 +52,7 @@
     color: #c0c5ce !important;
 }*/
 
-
+/*解决角落显示方块问题*/
 ::-webkit-scrollbar-corner {
     background-color: var(--hljs-bg);
     border-radius: 10px;
@@ -65,6 +65,17 @@ code {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    font-size: 0.75em;
+    line-height: 1.6;
+}
+
+/*评论区代码*/
+pre[class*="language-"] > code {
+    border-left: none !important;
+    font-size: 0.6em;
 }
 
 /* mac 风格 */
@@ -89,4 +100,5 @@ pre::after {
     -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
     box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
+
 
