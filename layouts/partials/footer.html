@@ -23,18 +23,9 @@
     <span>{{ site.Copyright | markdownify }}</span>
     {{- else }}
     <span>
-        Copyright
-        &copy;
-        {{ .Site.Params.StartYear }} - {{ now.Year }}
-        <a href="{{ "" | absLangURL }}" style="color:#7e7c7c;">{{ site.Title }}</a>
-        All Rights Reserved.
+        Copyright &copy; {{ now.Year }} <a href="{{ "" | absLangURL }}" style="color:#7e7c7c;">{{ site.Title }}</a>. All Rights Reserved.
     </span>
     {{- end }}
-    <!-- <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span> -->
     &zwnj;
     <span id="busuanzi_container_site_uv">
         <i class="fa-solid fa-user" style="opacity: 0.8"></i> <span id="busuanzi_value_site_uv"></span>
