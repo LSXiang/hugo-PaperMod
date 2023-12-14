@@ -66,6 +66,8 @@
 
 <article class="{{ $class }}">
   <div class="post-info">  <!--新添加的行-->
+    <!-- {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }} -->
+  	<!-- {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }} -->
     <header class="entry-header">
       <h2>
         {{- .Title }}
@@ -77,9 +79,9 @@
       <p>{{ .Description | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
     </section>
     {{- else if (ne (.Param "hideSummary") true) }}
-    <section class="entry-content">
+    <div class="entry-content">
       <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-    </section>
+    </div>
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <footer class="entry-footer">

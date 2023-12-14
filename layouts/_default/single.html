@@ -21,7 +21,7 @@
     </div>
     {{- end }}
   </header>
-  {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover_.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
@@ -36,13 +36,12 @@
   {{- end }}
 
   <footer class="post-footer">
-    <!-- {{- if .Params.tags }}
-    <ul class="post-tags">
-      {{- range ($.GetTerms "tags") }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-      {{- end }}
-    </ul>
-    {{- end }} -->
+    <!-- {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }} -->
+    <!-- <ul class="post-tags"> -->
+      <!-- {{- range ($.GetTerms $tags) }} -->
+      <!-- <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li> -->
+      <!-- {{- end }} -->
+    <!-- </ul> -->
     {{- if (.Param "license") }}
     <div class="post-tags">
       {{- partial "license.html" . -}}
