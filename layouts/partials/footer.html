@@ -37,7 +37,7 @@
 </footer>
 {{- end }}
 
-{{- if (not .Site.Params.disableScrollToTop) }}
+{{- if (not site.Params.disableScrollToTop) }}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <span class="topInner">
         <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -95,7 +95,7 @@
 <script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
             mybutton.style.visibility = "visible";
             mybutton.style.opacity = "1";
         } else {
