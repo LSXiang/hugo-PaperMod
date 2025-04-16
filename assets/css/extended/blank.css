@@ -43,12 +43,6 @@ pre, code {
     max-width: calc(var(--nav-width) + var(--gap) * 10);
 }
 
-body {
-    font-size: 18px;
-    line-height: 1.6;
-    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-}
-
 .dark .post-content h1, .dark .post-content h2, .dark .post-content h3,
 .dark .post-content h4, .dark .post-content h5, .dark .post-content h6,
 .dark .post-title {
@@ -96,9 +90,11 @@ body {
 }
 /* 行文风格 */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
     /* font-size: 1rem; */
-    line-height: 1.5;
+    /* font-size: 18px; */
+    /* line-height: 1.5; */
+    /* font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; */
+    /* font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif; */
     margin: 0;
 }
 .post-content blockquote {
