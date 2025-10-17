@@ -309,11 +309,11 @@
     margin-bottom: 10px;
 }
 
-.post-tags {
+/* .post-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-}
+} */
 
 .post-tags li {
     display: inline-block;
