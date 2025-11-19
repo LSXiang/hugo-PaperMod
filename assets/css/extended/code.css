@@ -20,10 +20,6 @@
     border-radius: var(--radius);
 }
 
-.post-content :not(table) ::-webkit-scrollbar-thumb {
-    /* border: 2px solid rgb(55, 65, 75); */
-}
-
 .post-content pre code {
     max-height: 50em;
     margin-bottom: 2%;
@@ -52,10 +48,18 @@
     color: #c0c5ce !important;
 }*/
 
+/* 针对所有代码块的滚动条 */
+pre code::-webkit-scrollbar,
+.highlight::-webkit-scrollbar,
+.code-block::-webkit-scrollbar {
+    width: 9px !important;
+    height: 9px !important;
+}
+
 /*解决角落显示方块问题*/
-::-webkit-scrollbar-corner {
+pre code::-webkit-scrollbar-corner {
     background-color: var(--hljs-bg);
-    border-radius: 10px;
+    border-radius: var(--radius);
 }
 
 

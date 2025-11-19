@@ -72,7 +72,7 @@
 
 .toc .inner::-webkit-scrollbar-thumb {
     background: var(--border);
-    border: 5px solid var(--theme);
+    border: 8px solid var(--theme);
     border-radius: var(--radius);
 }
 

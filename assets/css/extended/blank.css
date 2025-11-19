@@ -390,15 +390,6 @@ img:active {
     text-align: center;
 }
 
-
-/*代码里的滚动*/
-@media screen and (min-width: 768px) {
-    ::-webkit-scrollbar {
-        width: 13px;
-        height: 13px;
-    }
-}
-
 /*页面顶部栏两边宽度*/
 .nav {
     max-width: calc(var(--nav-width) + var(--gap) * 10);
