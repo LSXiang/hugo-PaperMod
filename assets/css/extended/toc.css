@@ -76,6 +76,15 @@
     border-radius: var(--radius);
 }
 
+[data-theme="light"] .toc .inner::-webkit-scrollbar-thumb:hover {
+    border: 8px solid rgb(255, 255, 255);
+    background: rgb(173, 173, 173);
+}
+
+[data-theme="dark"] .toc .inner::-webkit-scrollbar-thumb:hover {
+    background: rgb(112, 112, 112);
+}
+
 .toc li ul {
     margin-inline-start: calc(var(--gap) * 0.5);
     list-style-type: none;
