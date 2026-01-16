@@ -20,6 +20,11 @@ ul.post-tags-meta a {
 
 /*评论头部间距*/
 .post-footer {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* 设置 Twikoo 评论区最小高度 */
+.twikoo .el-textarea__inner {
+    min-height: 96px !important;
 }
