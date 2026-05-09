@@ -1,0 +1,191 @@
+/* ================================
+ * Scrollbar - Global
+ * ================================ */
+
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--tertiary) var(--theme);
+}
+
+/* WebKit: Chrome / Edge / Safari */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 60px;
+    background: var(--tertiary);
+    border: 4px solid var(--theme);
+    border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* light mode: list page scrollbar */
+[data-theme="light"] .list::-webkit-scrollbar-thumb {
+    border-color: var(--code-bg);
+}
+
+
+/* ================================
+ * Scrollbar - Code Block
+ * 代码块滚动条：背景同代码块背景
+ * ================================ */
+
+.post-content pre,
+.post-content code,
+.post-content .highlight,
+.post-content .highlight pre {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(113, 113, 117) var(--code-block-bg);
+}
+
+.post-content pre::-webkit-scrollbar,
+.post-content code::-webkit-scrollbar,
+.post-content .highlight::-webkit-scrollbar,
+.post-content .highlight pre::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: var(--code-block-bg);
+}
+
+.post-content pre::-webkit-scrollbar-track,
+.post-content code::-webkit-scrollbar-track,
+.post-content .highlight::-webkit-scrollbar-track,
+.post-content .highlight pre::-webkit-scrollbar-track {
+    background: var(--code-block-bg);
+}
+
+.post-content pre::-webkit-scrollbar-thumb,
+.post-content code::-webkit-scrollbar-thumb,
+.post-content .highlight::-webkit-scrollbar-thumb,
+.post-content .highlight pre::-webkit-scrollbar-thumb {
+    background: rgb(113, 113, 117);
+    border: 2px solid var(--code-block-bg);
+    border-radius: var(--radius);
+}
+
+.post-content pre::-webkit-scrollbar-thumb:hover,
+.post-content code::-webkit-scrollbar-thumb:hover,
+.post-content .highlight::-webkit-scrollbar-thumb:hover,
+.post-content .highlight pre::-webkit-scrollbar-thumb:hover {
+    background: rgb(163, 163, 165);
+}
+
+/* highlighttable 内部 code 滚动条隐藏，避免双滚动条 */
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ================================
+ * Scrollbar - Post Table
+ * 文章表格滚动条
+ * ================================ */
+
+.post-content table {
+    scrollbar-width: thin;
+    scrollbar-color: var(--tertiary) var(--theme);
+}
+
+.post-content table::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.post-content table::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+.post-content table::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border: 2px solid var(--theme);
+    border-radius: var(--radius);
+}
+
+.post-content table::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+
+/* ================================
+ * Scrollbar - TOC
+ * 目录滚动条：更小，只显示边条
+ * ================================ */
+
+.toc,
+.toc details,
+.toc .inner {
+    scrollbar-width: thin;
+    scrollbar-color: var(--tertiary) transparent;
+}
+
+.toc::-webkit-scrollbar,
+.toc details::-webkit-scrollbar,
+.toc .inner::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.toc::-webkit-scrollbar-track,
+.toc details::-webkit-scrollbar-track,
+.toc .inner::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toc::-webkit-scrollbar-thumb,
+.toc details::-webkit-scrollbar-thumb,
+.toc .inner::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    background-clip: content-box;
+}
+
+.toc::-webkit-scrollbar-thumb:hover,
+.toc details::-webkit-scrollbar-thumb:hover,
+.toc .inner::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+    background-clip: content-box;
+}
+
+
+/* ================================
+ * Scrollbar - GitHub Gist
+ * ================================ */
+
+.gist table {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(173, 173, 173) rgb(255, 255, 255);
+}
+
+.gist table::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.gist table::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+
+.gist table::-webkit-scrollbar-thumb {
+    background: rgb(173, 173, 173);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: var(--radius);
+}
+
+.gist table::-webkit-scrollbar-thumb:hover {
+    background: rgb(112, 112, 112);
+}

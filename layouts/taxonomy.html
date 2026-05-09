@@ -17,6 +17,18 @@
             {{- $name := .Name }}
             {{- $count := .Count }}
             {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+            {{- $size := 1.0 }}
+            {{- if ge $count 15 }}
+                {{- $size = 1.55 }}
+            {{- else if ge $count 10 }}
+                {{- $size = 1.35 }}
+            {{- else if ge $count 6 }}
+                {{- $size = 1.2 }}
+            {{- else if ge $count 3 }}
+                {{- $size = 1.05 }}
+            {{- else }}
+                {{- $size = 0.9 }}
+            {{- end }}
             <li>
                 <a href="{{ .Permalink }}">{{ .LinkTitle }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
             </li>

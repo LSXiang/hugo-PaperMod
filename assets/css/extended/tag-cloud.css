@@ -1,45 +1,248 @@
-/*标签*/
+/* ================================
+ * Tags - Nebula Cloud
+ * 数字越大的 tag 越大
+ * ================================ */
+
 .terms-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 900px;
+
+    gap: 30px 56px;
+
+    margin-top: var(--content-gap);
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 2rem 1rem 2.5rem;
+
     text-align: center;
 }
 
+.terms-tags li {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    font-weight: 400;
+
+    transform-origin: center;
+}
+
+
+/* ================================
+ * Tag Link
+ * ================================ */
+
 .terms-tags a {
-    border-radius: 30px;
+    position: relative;
+
+    display: inline-block;
+
+    padding: 0;
+    border-radius: 0;
+
     background: none;
-    transition: transform 0.5s;
+    box-shadow: none;
+
+    color: var(--primary);
+    text-decoration: none;
+
+    line-height: 1.35;
+
+    /*
+     * 关键：
+     * Hugo 模板中输出：
+     * style="--tag-size: 1.35rem;"
+     */
+    font-size: var(--tag-size, 1rem);
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        opacity 0.25s ease;
+
+    will-change: transform;
 }
 
 .terms-tags a:hover {
     background: none;
+    box-shadow: none;
 
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-
-    transform: scale(1.2);
-
-    transition: box-shadow 0.4s ease, transform 0.4s ease;
-
+    color: var(--secondary);
+    transform: scale(1.14);
 }
 
-.dark .terms-tags a {
+
+/* 禁用旧星云胶囊效果 */
+.terms-tags a::before,
+.terms-tags a::after {
+    display: none;
+}
+
+
+/* ================================
+ * Count Number
+ * 右上角数量
+ * ================================ */
+
+.terms-tags a sup {
+    position: relative;
+    top: -0.1em;
+
+    margin-left: -1px;
+
+    font-size: 0.85em;
+    font-weight: 500;
+    line-height: 1;
+
+    opacity: 0.95;
+}
+
+
+/* ================================
+ * Nebula Shape
+ * 星云状错落分布
+ * ================================ */
+
+.terms-tags li:nth-child(12n + 1) {
+    transform: translateY(-10px);
+}
+
+.terms-tags li:nth-child(12n + 2) {
+    transform: translateY(5px);
+}
+
+.terms-tags li:nth-child(12n + 3) {
+    transform: translateY(-16px);
+}
+
+.terms-tags li:nth-child(12n + 4) {
+    transform: translateY(8px);
+}
+
+.terms-tags li:nth-child(12n + 5) {
+    transform: translateY(15px);
+}
+
+.terms-tags li:nth-child(12n + 6) {
+    transform: translateY(-6px);
+}
+
+.terms-tags li:nth-child(12n + 7) {
+    transform: translateY(18px);
+}
+
+.terms-tags li:nth-child(12n + 8) {
+    transform: translateY(-12px);
+}
+
+.terms-tags li:nth-child(12n + 9) {
+    transform: translateY(6px) translateX(-8px);
+}
+
+.terms-tags li:nth-child(12n + 10) {
+    transform: translateY(-18px) translateX(6px);
+}
+
+.terms-tags li:nth-child(12n + 11) {
+    transform: translateY(12px) translateX(10px);
+}
+
+.terms-tags li:nth-child(12n) {
+    transform: translateY(-4px) translateX(-10px);
+}
+
+
+/* ================================
+ * Fallback Size Variation
+ * 如果没有 --tag-size，则提供轻微错落大小
+ * 注意：这不是按真实数量，只是兜底
+ * ================================ */
+
+.terms-tags li:nth-child(9n + 1) a {
+    font-size: var(--tag-size, 1.05rem);
+}
+
+.terms-tags li:nth-child(9n + 2) a {
+    font-size: var(--tag-size, 1.25rem);
+}
+
+.terms-tags li:nth-child(9n + 3) a {
+    font-size: var(--tag-size, 0.95rem);
+}
+
+.terms-tags li:nth-child(9n + 4) a {
+    font-size: var(--tag-size, 1.35rem);
+}
+
+.terms-tags li:nth-child(9n + 5) a {
+    font-size: var(--tag-size, 0.92rem);
+}
+
+.terms-tags li:nth-child(9n + 6) a {
+    font-size: var(--tag-size, 1.15rem);
+}
+
+.terms-tags li:nth-child(9n + 7) a {
+    font-size: var(--tag-size, 0.98rem);
+}
+
+.terms-tags li:nth-child(9n + 8) a {
+    font-size: var(--tag-size, 1.2rem);
+}
+
+.terms-tags li:nth-child(9n) a {
+    font-size: var(--tag-size, 1.45rem);
+}
+
+
+/* ================================
+ * Dark Mode
+ * ================================ */
+
+.dark .terms-tags a,
+[data-theme="dark"] .terms-tags a {
     background: none;
+    box-shadow: none;
+    color: var(--primary);
 }
 
-.dark .terms-tags a:hover {
+.dark .terms-tags a:hover,
+[data-theme="dark"] .terms-tags a:hover {
     background: none;
-
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-
-    transform: scale(1.2);
-
-    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    box-shadow: none;
+    color: var(--secondary);
 }
 
-.terms-tags li {
-    margin: 5px;
+
+/* ================================
+ * Mobile
+ * ================================ */
+
+@media screen and (max-width: 768px) {
+    .terms-tags {
+        max-width: 100%;
+        gap: 22px 34px;
+        padding: 1.5rem 0.5rem 2rem;
+    }
+
+    .terms-tags a {
+        line-height: 1.3;
+    }
+
+    .terms-tags a sup {
+        top: -0.55em;
+        margin-left: 1px;
+        font-size: 0.68em;
+    }
+
+    .terms-tags li:nth-child(n) {
+        transform: none;
+    }
 }
