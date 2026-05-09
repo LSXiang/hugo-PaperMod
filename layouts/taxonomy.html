@@ -30,7 +30,7 @@
                 {{- $size = 0.9 }}
             {{- end }}
             <li>
-                <a href="{{ .Permalink }}">{{ .LinkTitle }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+                <a href="{{ .Permalink }}" style="--tag-size: {{ $size }}rem;">{{ .LinkTitle }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
             </li>
         {{- end }}
     {{- end }}
