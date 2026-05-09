@@ -1,0 +1,18 @@
+{{- $inner := .Inner -}}
+
+{{- /*
+    如果公式写在 blockquote 中：
+
+    > $$
+    > x = y
+    > $$
+
+    passthrough 可能会把每行前面的 > 保留下来。
+    这里统一移除行首的 > 或 > 空格。
+*/ -}}
+
+{{- $inner = replaceRE `(?m)^\s*>\s?` "" $inner -}}
+
+$$
+{{ $inner | safeHTML }}
+$$
